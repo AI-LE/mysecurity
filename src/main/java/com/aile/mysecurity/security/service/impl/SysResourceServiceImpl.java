@@ -1,4 +1,4 @@
-package com.aile.mysecurity.security.service.Impl;
+package com.aile.mysecurity.security.service.impl;
 
 import com.aile.mysecurity.security.entity.SysResource;
 import com.aile.mysecurity.security.mapper.SysResourceMapper;

@@ -7,6 +7,15 @@
         <id column="id" property="id" />
         <result column="username" property="username" />
         <result column="password" property="password" />
+        <collection property="role" ofType="com.aile.mysecurity.security.entity.SysRole">
+            <result column="name" property="name"/>
+        </collection>
     </resultMap>
-
+    <select id="selectByName" resultMap="BaseResultMap">
+        select u.id, u.username, u.password, sys_role.name
+        from sys_user u
+        left join sys_role_user on u.id = sys_role_user.sys_user_id
+        left join sys_role on sys_role.id = sys_role_user.sys_user_id
+        where username=#{$username}
+    </select>
 </mapper>

@@ -9,5 +9,5 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @MapperScan("com.aile.mysecurity.**.mapper")
-public class DataSourceConfiguration {
+public class MapperConfiguration {
 }
